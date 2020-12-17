@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: DockerFile.dev
+    ports:
+      - '3030:3000'
+    volumes:
+      - /app/node_modules
+      - .:/app
+# we can remove COPY . . in dockerFIle if we are using volumes, which always reference the source code
