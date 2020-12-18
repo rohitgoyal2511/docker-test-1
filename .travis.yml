@@ -2,6 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
+  - gem install bundler --pre
   - docker build -t react-image -f DockerFile.dev .
 script:
   - docker run react-image npm run test -- --coverage
