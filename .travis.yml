@@ -1,9 +1,7 @@
 sudo: required
 services:
   - docker
-
 before_install:
   - docker build -t react-image -f DockerFile.dev .
-
 script:
   - docker run react-image npm run test -- --coverage
