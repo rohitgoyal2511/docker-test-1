@@ -1,9 +1,11 @@
+language: ruby
+install:
+  - gem uninstall bundler
+  - gem install bundler --version '1.7.4'
+script: 'rake'
 sudo: required
 services:
   - docker
-before_install:
-  - gem install bundler --pre
-  - bundle update
 # script:
 #   - docker run react-image npm run test -- --coverage
 deploy:
