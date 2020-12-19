@@ -4,8 +4,8 @@ services:
 before_install:
   - gem install bundler --pre
   - docker build -t react-image -f DockerFile.dev .
-script:
-  - docker run react-image npm run test -- --coverage
+# script:
+#   - docker run react-image npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
