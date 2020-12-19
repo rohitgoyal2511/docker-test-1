@@ -1,7 +1,6 @@
 language: ruby
 install:
   - gem install bundler --version '1.7.4'
-script: 'rake'
 sudo: required
 services:
   - docker
